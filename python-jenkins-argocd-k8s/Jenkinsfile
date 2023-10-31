@@ -18,7 +18,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:latest .
+                    docker build -t abhishekf5/cicd-e2e:33 .
                     '''
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push mahiramesh2617/myargo
+                    docker push mahiramesh2617/myargo:33
                     '''
                 }
             }
