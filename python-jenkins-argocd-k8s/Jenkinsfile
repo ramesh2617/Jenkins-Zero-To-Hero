@@ -2,10 +2,7 @@ pipeline {
     
     agent any 
     
-    environment {
-        IMAGE_TAG = "${latest}"
-    }
-    
+   
     stages {
         
         stage('Checkout'){
@@ -21,7 +18,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t abhishekf5/cicd-e2e:${latest} .
+                    docker build -t abhishekf5/cicd-e2e:latest .
                     '''
                 }
             }
@@ -32,7 +29,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push mahiramesh2617/myargo:${BUILD_NUMBER}
+                    docker push mahiramesh2617/myargo
                     '''
                 }
             }
