@@ -32,7 +32,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push ramesh2617/myargo:${BUILD_NUMBER}
+                    docker push mahiramesh2617/myargo:${BUILD_NUMBER}
                     '''
                 }
             }
